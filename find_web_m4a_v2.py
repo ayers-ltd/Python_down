@@ -22,6 +22,6 @@ for range_num in range(1, 9):
     response_html = requests.get('https://www.ximalaya.com/xiangsheng/6355825/p' + str(range_num) + '/',  headers=heads)
     html_ml = re.findall('<div class="text _c2"><a title="(.*?)" href="/xiangsheng/6355825/(.*?)">', response_html.text)
     for filename in html_ml:
-        print(filename)
+        print(filename[0])
     """start '#' is down list """
         #download_madia(filename[1],filename[0])
